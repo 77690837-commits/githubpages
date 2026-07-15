@@ -10,6 +10,7 @@
     <meta name="author" content="CodeStandards Academy" />
     <title>Curso de Estándares de Codificación | Domina el Código Limpio</title>
 
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +21,14 @@
     <script src="java.js" defer></script>
   </head>
   <body>
+    <!-- ==========================================
+       HEADER / NAVBAR
+       ========================================== -->
     <header class="navbar" id="navbar">
       <div class="container navbar__container">
+        <!-- Logo Editable -->
         <a href="#inicio" class="navbar__logo" aria-label="Volver al inicio">
+          <!-- SVG Logo Placeholder -->
           <svg class="navbar__logo-icon" viewBox="0 0 24 24">
             <polyline points="16 18 22 12 16 6"></polyline>
             <polyline points="8 6 2 12 8 18"></polyline>
@@ -33,6 +39,7 @@
           >
         </a>
 
+        <!-- Navegación -->
         <nav aria-label="Menú principal">
           <ul class="navbar__menu">
             <li><a href="#inicio" class="navbar__link">Inicio</a></li>
@@ -44,16 +51,20 @@
           </ul>
         </nav>
 
+        <!-- Botones de Acción -->
         <div class="navbar__actions">
+          <!-- Botón de Modo Claro / Oscuro -->
           <button
             class="theme-toggle"
             id="theme-toggle"
             aria-label="Alternar tema oscuro/claro"
             title="Cambiar tema"
           >
+            <!-- Icono Luna (Modo Claro visible) -->
             <svg class="theme-toggle__moon" viewBox="0 0 24 24">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
+            <!-- Icono Sol (Modo Oscuro visible) -->
             <svg class="theme-toggle__sun" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -73,6 +84,9 @@
     </header>
 
     <main>
+      <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
       <section class="hero" id="inicio">
         <div class="container hero__grid">
           <div class="hero__info reveal">
@@ -85,7 +99,7 @@
             </h1>
             <p class="hero__description">
               Domina los estándares de codificación más rigurosos del desarrollo
-              modern. Convierte bases de código confusas en sistemas legibles,
+              moderno. Convierte bases de código confusas en sistemas legibles,
               escalables y fáciles de mantener.
             </p>
             <div class="hero__buttons">
@@ -96,6 +110,7 @@
             </div>
           </div>
 
+          <!-- IDE CSS/SVG Interactivo -->
           <div class="reveal">
             <div class="ide-mockup" id="ide-mockup">
               <div class="ide-header">
@@ -126,6 +141,7 @@
                   1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9
                 </div>
 
+                <!-- Panel 1: Código Sucio -->
                 <div class="code-panel" id="code-dirty">
                   <div class="ide-code">
                     <span class="comment"
@@ -144,6 +160,7 @@
                   </div>
                 </div>
 
+                <!-- Panel 2: Código Limpio -->
                 <div class="code-panel code-panel--hidden" id="code-clean">
                   <div class="ide-code">
                     <span class="comment"
@@ -166,6 +183,7 @@
                 </div>
               </div>
 
+              <!-- Botón interactivo de alternancia -->
               <button class="ide-toggle-view" id="ide-toggle-btn">
                 <svg
                   width="12"
@@ -185,6 +203,9 @@
         </div>
       </section>
 
+      <!-- ==========================================
+         STATS SECTION
+         ========================================== -->
       <section class="stats">
         <div class="container stats__grid">
           <div class="stats__card">
@@ -212,6 +233,9 @@
         </div>
       </section>
 
+      <!-- ==========================================
+         SESSIONS SECTION
+         ========================================== -->
       <section class="sessions-sec" id="sesiones">
         <div class="container">
           <div class="section-header reveal">
@@ -223,6 +247,7 @@
           </div>
 
           <div class="sessions-grid reveal">
+            <!-- Sesión 1 -->
             <article class="session-card">
               <div class="session-card__num">01</div>
               <h3 class="session-card__title">
@@ -259,6 +284,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 2 -->
             <article class="session-card">
               <div class="session-card__num">02</div>
               <h3 class="session-card__title">
@@ -295,6 +321,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 3 -->
             <article class="session-card">
               <div class="session-card__num">03</div>
               <h3 class="session-card__title">
@@ -331,6 +358,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 4 -->
             <article class="session-card">
               <div class="session-card__num">04</div>
               <h3 class="session-card__title">
@@ -367,6 +395,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 5 -->
             <article class="session-card">
               <div class="session-card__num">05</div>
               <h3 class="session-card__title">
@@ -403,6 +432,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 6 -->
             <article class="session-card">
               <div class="session-card__num">06</div>
               <h3 class="session-card__title">
@@ -439,6 +469,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 7 -->
             <article class="session-card">
               <div class="session-card__num">07</div>
               <h3 class="session-card__title">
@@ -475,6 +506,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 8 -->
             <article class="session-card">
               <div class="session-card__num">08</div>
               <h3 class="session-card__title">
@@ -511,6 +543,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 9 -->
             <article class="session-card">
               <div class="session-card__num">09</div>
               <h3 class="session-card__title">
@@ -547,6 +580,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 10 -->
             <article class="session-card">
               <div class="session-card__num">10</div>
               <h3 class="session-card__title">Estándares de programación</h3>
@@ -581,6 +615,8 @@
               </ul>
             </article>
 
+            <!-- Sesiones Vacías e Interactivas (11 a 16) -->
+            <!-- Sesión 11 -->
             <article class="session-card">
               <div class="session-card__num">11</div>
               <h3 class="session-card__title">
@@ -761,6 +797,7 @@
               </ul>
             </article>
 
+            <!-- Sesión 16 -->
             <article class="session-card">
               <div class="session-card__num">16</div>
               <h3 class="session-card__title">
@@ -799,6 +836,439 @@
           </div>
         </div>
       </section>
+
+      <!-- ==========================================
+         BENEFITS SECTION
+         ========================================== -->
+      <section class="benefits" id="beneficios">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="section-header__title">
+              ¿Por qué es vital usar estándares?
+            </h2>
+            <p class="section-header__desc">
+              Escribir código legible acelera la velocidad del equipo, minimiza
+              la fricción técnica y asegura la escalabilidad del sistema.
+            </p>
+          </div>
+
+          <div class="benefits__grid reveal">
+            <!-- Beneficio 1 -->
+            <article class="benefit-card">
+              <div class="benefit-card__icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">Alta Mantenibilidad</h3>
+              <p class="benefit-card__desc">
+                Un código estructurado adecuadamente permite a nuevos
+                programadores integrarse e implementar cambios en días en lugar
+                de semanas.
+              </p>
+            </article>
+
+            <!-- Beneficio 2 -->
+            <article class="benefit-card">
+              <div class="benefit-card__icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">Colaboración Eficiente</h3>
+              <p class="benefit-card__desc">
+                Al aplicar las mismas reglas de nomenclatura y estilo, los pull
+                requests son más rápidos y las revisiones de código se vuelven
+                un agrado.
+              </p>
+            </article>
+
+            <!-- Beneficio 3 -->
+            <article class="benefit-card">
+              <div class="benefit-card__icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <rect
+                    x="3"
+                    y="11"
+                    width="18"
+                    height="11"
+                    rx="2"
+                    ry="2"
+                  ></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">Menos Deuda Técnica</h3>
+              <p class="benefit-card__desc">
+                Previene la acumulación de antipatrones que frenan la
+                productividad. Menos bugs críticos en producción y mayor
+                robustez del sistema.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         INSTRUCTOR SECTION
+         ========================================== -->
+      <section class="instructor" id="instructor">
+        <div class="container reveal">
+          <div class="instructor__card">
+            <div class="instructor__avatar-area">
+              <div class="instructor__avatar-bg"></div>
+              <!-- Avatar SVG estilizado representativo del instructor -->
+              <svg
+                class="instructor__avatar-svg"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#1e3a8a"></stop>
+                    <stop offset="100%" stop-color="#2563eb"></stop>
+                  </linearGradient>
+                  <clipPath id="circleClip">
+                    <circle cx="50" cy="50" r="48"></circle>
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#circleClip)">
+                  <!-- Fondo -->
+                  <rect width="100" height="100" fill="url(#avatarGrad)"></rect>
+                  <path d="M20 90 C 20 65, 80 65, 80 90" fill="#0f172a"></path>
+                  <circle cx="50" cy="40" r="18" fill="#e2e8f0"></circle>
+                  <!-- Lentes de programador -->
+                  <rect
+                    x="38"
+                    y="36"
+                    width="10"
+                    height="8"
+                    rx="2"
+                    fill="none"
+                    stroke="#0f172a"
+                    stroke-width="2"
+                  ></rect>
+                  <rect
+                    x="52"
+                    y="36"
+                    width="10"
+                    height="8"
+                    rx="2"
+                    fill="none"
+                    stroke="#0f172a"
+                    stroke-width="2"
+                  ></rect>
+                  <line
+                    x1="48"
+                    y1="40"
+                    x2="52"
+                    y2="40"
+                    stroke="#0f172a"
+                    stroke-width="2"
+                  ></line>
+                  <!-- Líneas de código flotantes en el fondo -->
+                  <path
+                    d="M15 25 L30 25"
+                    stroke="#38bdf8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="0.6"
+                  ></path>
+                  <path
+                    d="M70 30 L85 30"
+                    stroke="#34d399"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="0.6"
+                  ></path>
+                  <path
+                    d="M12 50 L25 50"
+                    stroke="#fb7185"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="0.6"
+                  ></path>
+                </g>
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="48"
+                  fill="none"
+                  stroke="var(--border-color)"
+                  stroke-width="2"
+                ></circle>
+              </svg>
+            </div>
+
+            <div class="instructor__info">
+              <span class="instructor__tag">Alumno</span>
+              <h2 class="instructor__name">García Samaniego José M.</h2>
+              <p class="instructor__role">
+                Estudiante de Estandares de Codificacion
+              </p>
+              <p class="instructor__bio">
+                Apasionado por la calidad del código y la mejora continua. Con
+                más de 5 años de experiencia en desarrollo de software, he
+                liderado proyectos que han refactorizado más de 50k líneas de
+                código, mejorando la mantenibilidad y escalabilidad de sistemas
+                críticos.
+              </p>
+              <div class="instructor__stats">
+                <div class="instructor__stat-item">
+                  <span class="instructor__stat-num">1k+</span>
+                  <span class="instructor__stat-label"
+                    >Líneas Refactorizadas</span
+                  >
+                </div>
+                <div class="instructor__stat-item">
+                  <span class="instructor__stat-num">15+</span>
+                  <span class="instructor__stat-label">Cursos </span>
+                </div>
+                <div class="instructor__stat-item">
+                  <span class="instructor__stat-num">4.9/5</span>
+                  <span class="instructor__stat-label"
+                    >Valoración Asistencias</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         REGISTRATION / CONTACT SECTION
+         ========================================== -->
+      <section class="register" id="registro">
+        <div class="container register__container">
+          <div class="register__grid">
+            <div class="register__info reveal">
+              <h2>Da el salto profesional que tu código necesita</h2>
+              <p>
+                Inscríbete hoy y asegura tu acceso directo a las 16 sesiones de
+                clase, mentoría semanal de código y el certificado oficial al
+                finalizar la cursada.
+              </p>
+              <ul class="register__features">
+                <li class="register__feature-item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Acceso de por vida a la plataforma
+                </li>
+                <li class="register__feature-item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Plantillas de configuración (ESLint, Prettier, Git)
+                </li>
+                <li class="register__feature-item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Certificado digital verificado
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="form-card reveal" id="form-container">
+                <!-- Formulario Real -->
+                <form id="registration-form" novalidate>
+                  <div class="form-group">
+                    <label for="name" class="form-label">Nombre Completo</label>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-input"
+                      placeholder="Tu nombre y apellido"
+                      required
+                    />
+                    <div class="form-feedback" id="name-feedback">
+                      Por favor, introduce tu nombre completo.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="form-label"
+                      >Correo Electrónico</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-input"
+                      placeholder="ejemplo@correo.com"
+                      required
+                    />
+                    <div class="form-feedback" id="email-feedback">
+                      Introduce un correo electrónico válido.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="level" class="form-label"
+                      >Nivel de Programación Actual</label
+                    >
+                    <select
+                      id="level"
+                      class="form-input"
+                      style="background-color: #0f172a; cursor: pointer"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Selecciona tu nivel
+                      </option>
+                      <option value="junior">Junior (Menos de 2 años)</option>
+                      <option value="mid">Mid-level (2 a 5 años)</option>
+                      <option value="senior">Senior (Más de 5 años)</option>
+                    </select>
+                    <div class="form-feedback" id="level-feedback">
+                      Por favor, selecciona una opción.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn-submit" id="submit-btn">
+                    Enviar Registro
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                </form>
+
+                <!-- Tarjeta de Éxito Oculta por defecto -->
+                <div class="success-card" id="success-card">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <h3>¡Inscripción Recibida!</h3>
+                  <p id="success-message">
+                    Gracias por registrarte. Hemos enviado un correo electrónico
+                    con los detalles y el enlace a la primera sesión. ¡Prepárate
+                    para escribir código excepcional!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- ==========================================
+       FOOTER
+       ========================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__logo-area">
+            <div class="footer__logo">
+              <svg class="footer__logo-icon" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+              </svg>
+              <span>CODESTANDARDS</span>
+            </div>
+            <p class="footer__desc">
+              Elevando el nivel técnico de los desarrolladores hispanohablantes
+              mediante la adopción de buenas prácticas y arquitecturas robustas.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer__title">Enlaces</h4>
+            <ul class="footer__links">
+              <li><a href="#inicio" class="footer__link">Inicio</a></li>
+              <li>
+                <a href="#sesiones" class="footer__link">Plan de Estudios</a>
+              </li>
+              <li><a href="#beneficios" class="footer__link">Beneficios</a></li>
+              <li><a href="#instructor" class="footer__link">Instructor</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer__title">Legal</h4>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Términos de Servicio</a></li>
+              <li>
+                <a href="#" class="footer__link">Política de Privacidad</a>
+              </li>
+              <li><a href="#" class="footer__link">Cookies</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer__title">Comunidad</h4>
+            <div class="footer__socials">
+              <a href="#" class="footer__social-btn" aria-label="Twitter">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="footer__social-btn" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="footer__social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"
+                  ></path>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>
+            &copy; 2026 CodeStandards Academy. Todos los derechos reservados.
+          </p>
+          <p>Hecho con &hearts; para desarrolladores profesionales.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
