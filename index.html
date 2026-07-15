@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aprende estándares de codificación profesional. Curso intensivo de 16 sesiones para dominar la calidad, legibilidad y arquitectura de software."
+    />
+    <meta name="author" content="CodeStandards Academy" />
+    <title>Curso de Estándares de Codificación | Domina el Código Limpio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="java.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="container navbar__container">
+        <a href="#inicio" class="navbar__logo" aria-label="Volver al inicio">
+          <svg class="navbar__logo-icon" viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+            <line x1="12" y1="4" x2="12" y2="20"></line>
+          </svg>
+          <span
+            >CODE<span style="color: var(--color-accent)">STANDARDS</span></span
+          >
+        </a>
+
+        <nav aria-label="Menú principal">
+          <ul class="navbar__menu">
+            <li><a href="#inicio" class="navbar__link">Inicio</a></li>
+            <li>
+              <a href="#sesiones" class="navbar__link">Plan de Estudios</a>
+            </li>
+            <li><a href="#beneficios" class="navbar__link">Beneficios</a></li>
+            <li><a href="#instructor" class="navbar__link">Instructor</a></li>
+          </ul>
+        </nav>
+
+        <div class="navbar__actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Alternar tema oscuro/claro"
+            title="Cambiar tema"
+          >
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <a href="#registro" class="btn-nav">Inscribirse</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero__grid">
+          <div class="hero__info reveal">
+            <div class="hero__badge">
+              <span class="hero__badge-pulse"></span>
+              Cupos Limitados • Lanzamiento
+            </div>
+            <h1 class="hero__title">
+              Estandares de Codificación <span>Los Mejores</span>
+            </h1>
+            <p class="hero__description">
+              Domina los estándares de codificación más rigurosos del desarrollo
+              modern. Convierte bases de código confusas en sistemas legibles,
+              escalables y fáciles de mantener.
+            </p>
+            <div class="hero__buttons">
+              <a href="#registro" class="btn btn--primary">Comenzar Ahora</a>
+              <a href="#sesiones" class="btn btn--secondary"
+                >Ver Plan de Estudios</a
+              >
+            </div>
+          </div>
+
+          <div class="reveal">
+            <div class="ide-mockup" id="ide-mockup">
+              <div class="ide-header">
+                <div class="ide-dots">
+                  <span class="ide-dot ide-dot--red"></span>
+                  <span class="ide-dot ide-dot--yellow"></span>
+                  <span class="ide-dot ide-dot--green"></span>
+                </div>
+                <div class="ide-tab">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                  codigo_limpio.js
+                </div>
+                <div style="width: 40px"></div>
+              </div>
+
+              <div class="ide-body">
+                <div class="ide-lines">
+                  1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9
+                </div>
+
+                <div class="code-panel" id="code-dirty">
+                  <div class="ide-code">
+                    <span class="comment"
+                      >// Código antes de aplicar estándares</span
+                    >
+                    <span class="keyword">function</span>
+                    <span class="function">proc</span>(d, a) {
+                    <span class="keyword">let</span> x = [];
+                    <span class="keyword">for</span>(<span class="keyword"
+                      >let</span
+                    >
+                    i=0; i&lt;d.length; i++) {
+                    <span class="keyword">if</span>(d[i].age &gt;= a &amp;&amp;
+                    d[i].active === 1) { x.push(d[i]); } }
+                    <span class="keyword">return</span> x; }
+                  </div>
+                </div>
+
+                <div class="code-panel code-panel--hidden" id="code-clean">
+                  <div class="ide-code">
+                    <span class="comment"
+                      >// Código después de aplicar estándares</span
+                    >
+                    <span class="keyword">function</span>
+                    <span class="function">filterActiveUsersByAge</span>(users,
+                    minAge) { <span class="keyword">const</span>
+                    <span class="variable">MINIMUM_ACTIVE_STATE</span> = 1;
+
+                    <span class="keyword">return</span> users.filter(user =&gt;
+                    { <span class="keyword">const</span>
+                    <span class="variable">isOlderThanMin</span> = user.age
+                    &gt;= minAge; <span class="keyword">const</span>
+                    <span class="variable">isActive</span> = user.status ===
+                    MINIMUM_ACTIVE_STATE;
+                    <span class="keyword">return</span> isOlderThanMin
+                    &amp;&amp; isActive; }); }
+                  </div>
+                </div>
+              </div>
+
+              <button class="ide-toggle-view" id="ide-toggle-btn">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Ver Código Estandarizado
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container stats__grid">
+          <div class="stats__card">
+            <div class="stats__number">16</div>
+            <div class="stats__label">Sesiones de Clase</div>
+            <div class="stats__desc">Temario modular de principio a fin</div>
+          </div>
+          <div class="stats__card">
+            <div class="stats__number">32h</div>
+            <div class="stats__label">Práctica Guiada</div>
+            <div class="stats__desc">Ejercicios basados en casos reales</div>
+          </div>
+          <div class="stats__card">
+            <div class="stats__number">1 a 1</div>
+            <div class="stats__label">Soporte y Tutoría</div>
+            <div class="stats__desc">
+              Mentoría directa en tus dudas de código
+            </div>
+          </div>
+          <div class="stats__card">
+            <div class="stats__number">100%</div>
+            <div class="stats__label">Código Estandarizado</div>
+            <div class="stats__desc">Orientado a legibilidad y escala</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sessions-sec" id="sesiones">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="section-header__title">Plan de Estudios Completo</h2>
+            <p class="section-header__desc">
+              Un recorrido exhaustivo de 16 sesiones diseñadas para refinar tus
+              hábitos de escritura y estructuración de software profesional.
+            </p>
+          </div>
+
+          <div class="sessions-grid reveal">
+            <article class="session-card">
+              <div class="session-card__num">01</div>
+              <h3 class="session-card__title">
+                Introducción a los Estándares de Codificación
+              </h3>
+              <p class="session-card__body">
+                Comprende la importancia de la normalización, la legibilidad del
+                código y por qué el código limpio reduce drásticamente el costo
+                de mantenimiento en equipos de desarrollo.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Filosofía de código mantenible
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  La ley de boy scout
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">02</div>
+              <h3 class="session-card__title">
+                Herramientas de Validación de Código
+              </h3>
+              <p class="session-card__body">
+                Configuración y automatización del entorno mediante herramientas
+                de validación (Linters, Formateadores automáticos y análisis
+                estático) para asegurar la cohesión del equipo.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Configuración de ESLint y Prettier
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Reglas de análisis estático
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">03</div>
+              <h3 class="session-card__title">
+                Consideraciones Generales para la nomenclatura
+              </h3>
+              <p class="session-card__body">
+                Estudio de las bases lingüísticas y semánticas necesarias para
+                nombrar variables, clases, métodos y archivos, evitando la
+                ambigüedad y mejorando la auto-documentación.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Consistencia del lenguaje (Inglés vs Español)
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Glosario de términos del negocio
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">04</div>
+              <h3 class="session-card__title">
+                Estándares de Nombres, Descripciones y significativo
+              </h3>
+              <p class="session-card__body">
+                Cómo escribir nombres que revelen la intención y la lógica del
+                negocio sin necesidad de comentarios. Diferencias clave al
+                nombrar tipos de datos, booleanos y colecciones.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Reglas de nombres significativos
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Tipado implícito y explícito
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">05</div>
+              <h3 class="session-card__title">
+                Estándares de programación y diseño
+              </h3>
+              <p class="session-card__body">
+                Estructuración lógica de clases y componentes. Aplicación
+                práctica de estándares de cohesión alta, acoplamiento bajo y
+                cómo organizar el flujo visual de la lógica.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Cohesión alta vs Acoplamiento bajo
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Estructura jerárquica de archivos
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">06</div>
+              <h3 class="session-card__title">
+                Estándares de buenas prácticas en codificación
+              </h3>
+              <p class="session-card__body">
+                Directrices y guías estándar recomendadas por la industria
+                (Google, Airbnb, W3C) adaptadas para lograr un código limpio que
+                evite errores lógicos y de rendimiento comunes.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Guías de estilo recomendadas
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Prevención de antipatrones básicos
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">07</div>
+              <h3 class="session-card__title">
+                Estándares de codificación condicional
+              </h3>
+              <p class="session-card__body">
+                Cómo simplificar las condicionales complejas. Aplicación de las
+                cláusulas de guarda (guard clauses), eliminación de bloques
+                anidados extensos y uso de polimorfismo.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Cláusulas de Guarda (Return early)
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Simplificación de condicionales
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">08</div>
+              <h3 class="session-card__title">
+                Estándares de codificación repetitiva
+              </h3>
+              <p class="session-card__body">
+                Estructuras de bucles e iteración eficientes y legibles. Cuándo
+                preferir métodos declarativos de array (map, filter, reduce)
+                sobre bucles tradicionales imperativos.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Enfoque declarativo vs imperativo
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Evitar mutaciones de variables
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">09</div>
+              <h3 class="session-card__title">
+                Estándares de errores y manejo de excepciones
+              </h3>
+              <p class="session-card__body">
+                Estrategias de control de fallos sin ensuciar la lógica
+                principal del negocio. Creación de excepciones personalizadas y
+                mapeo de errores comprensibles.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Evitar try-catch vacíos o genéricos
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Estrategias de Logging de errores
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">10</div>
+              <h3 class="session-card__title">Estándares de programación</h3>
+              <p class="session-card__body">
+                Integración de todos los estándares previos en flujos y patrones
+                arquitectónicos completos. Convenciones sobre la gestión del
+                estado y dependencias en proyectos medianos.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Consistencia arquitectónica
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Límites lógicos de componentes
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">11</div>
+              <h3 class="session-card__title">
+                Estándares de Modularización y Reutilización
+              </h3>
+              <p class="session-card__body">
+                Aprende las reglas esenciales para descomponer sistemas grandes
+                en módulos independientes, cohesivos y altamente reutilizables
+                bajo el principio de responsabilidad única.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Límites de módulos y encapsulación
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  DRY (Don't Repeat Yourself) eficiente
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">12</div>
+              <h3 class="session-card__title">
+                Consideraciones de Optimización y Rendimiento
+              </h3>
+              <p class="session-card__body">
+                Diseña código eficiente controlando la complejidad algorítmica y
+                el uso óptimo de la memoria sin sacrificar la legibilidad del
+                software profesional.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Optimización prematura vs cuello de botella
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Complejidad temporal (Notación Big O)
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">13</div>
+              <h3 class="session-card__title">
+                Estándares para la Documentación
+              </h3>
+              <p class="session-card__body">
+                Aprende a estructurar documentación técnica que mantenga al
+                equipo sincronizado. Reglas de oro para comentarios efectivos en
+                código y generación de especificaciones de API.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Documentación JSDoc y Swagger/OpenAPI
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Escribir READMEs de alto impacto
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">14</div>
+              <h3 class="session-card__title">
+                Estándares de Seguridad del Software
+              </h3>
+              <p class="session-card__body">
+                Asegura tu código aplicando prácticas fundamentales de
+                codificación defensiva que prevengan vulnerabilidades críticas
+                en tus bases de datos y peticiones HTTP.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Sanitización y validación de entradas
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Prevención de OWASP Top 10 común
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">15</div>
+              <h3 class="session-card__title">
+                Estándares de Pruebas y Garantía de Calidad
+              </h3>
+              <p class="session-card__body">
+                Diseña arquitecturas testeables con altos estándares de
+                cobertura. Conoce la pirámide de pruebas y las metodologías para
+                asegurar que el código funcione de manera predecible.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Diseño de pruebas unitarias y de integración
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Conceptos de TDD (Test-Driven Development)
+                </li>
+              </ul>
+            </article>
+
+            <article class="session-card">
+              <div class="session-card__num">16</div>
+              <h3 class="session-card__title">
+                Componentes de Software Elaborados con Estándares
+              </h3>
+              <p class="session-card__body">
+                Proyecto integrador final. Desarrolla, optimiza y audita un
+                componente de software real bajo las métricas de calidad y
+                metodologías profesionales vistas en el curso.
+              </p>
+              <ul class="session-card__bullets">
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Revisión de código por pares (Code Review)
+                </li>
+                <li class="session-card__bullet">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Métricas finales de calidad de código
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
